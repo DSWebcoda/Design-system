@@ -409,6 +409,8 @@ document.addEventListener('keydown', function(e) {
 // Advanced Search Functionality
 function initializeSearch() {
     const searchInput = document.getElementById('search-input');
+    const searchClear = document.getElementById('search-clear');
+
     if (!searchInput) {
         console.log('Search input not found');
         return;
@@ -423,6 +425,11 @@ function initializeSearch() {
     let searchTimeout;
     searchInput.addEventListener('input', function(e) {
         const searchTerm = e.target.value.toLowerCase().trim();
+
+        // Show/hide clear button
+        if (searchClear) {
+            searchClear.style.display = e.target.value ? 'flex' : 'none';
+        }
 
         // Clear previous timeout
         clearTimeout(searchTimeout);
@@ -445,9 +452,22 @@ function initializeSearch() {
     searchInput.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             this.value = '';
+            if (searchClear) {
+                searchClear.style.display = 'none';
+            }
             resetNavigation();
         }
     });
+
+    // Clear button click handler
+    if (searchClear) {
+        searchClear.addEventListener('click', function() {
+            searchInput.value = '';
+            this.style.display = 'none';
+            searchInput.focus();
+            resetNavigation();
+        });
+    }
 }
 
 function buildSearchIndex() {
