@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Example - Design System</title>
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /* Full page layout for booking example */
+        body {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        .booking-page {
+            min-height: 100vh;
+            background-color: var(--bkg-base-primary);
+        }
+        .booking-demo {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .booking-main {
+            flex: 1;
+        }
+        .booking-demo {
+            margin: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .ticket-selector:hover {
+            border-color: rgba(0, 6, 79, 0.1);
+            box-shadow: none;
+        }
+        .quantity-display {
+            background-color: var(--white-100) !important;
+            color: var(--text-primary) !important;
+            border-radius: 4px;
+            min-width: 32px;
+            padding: 4px 8px;
+        }
+        .quantity-display.selected {
+            background-color: var(--bkg-dark-primary) !important;
+            color: var(--text-inverse) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-page">
+        <div class="booking-demo">
+            <div class="booking-main">
+                <div class="booking-header">
+                    <div class="logo-container">
+                        <div class="logo-bridge-museum">BridgeMuseum</div>
+                    </div>
+                    <div class="user-dropdown">
+                        <button class="btn btn-secondary-small">Account ↓</button>
+                    </div>
+                </div>
+                <div class="booking-content">
+                <div class="ticket-selection">
+                    <h2 class="selection-title">Select tickets</h2>
+                    <div class="ticket-list">
+                        <div class="ticket-selector">
+                            <div class="ticket-info">
+                                <h3>Adults</h3>
+                                <p>From $25.00</p>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn" data-action="decrease" data-ticket="adults">-</button>
+                                <span class="quantity-display" data-ticket="adults">0</span>
+                                <button class="quantity-btn" data-action="increase" data-ticket="adults">+</button>
+                            </div>
+                        </div>
+                        <div class="ticket-selector">
+                            <div class="ticket-info">
+                                <h3>Child (4-13 Years)</h3>
+                                <p>From $15.00</p>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn" data-action="decrease" data-ticket="child">-</button>
+                                <span class="quantity-display" data-ticket="child">0</span>
+                                <button class="quantity-btn" data-action="increase" data-ticket="child">+</button>
+                            </div>
+                        </div>
+                        <div class="ticket-selector">
+                            <div class="ticket-info">
+                                <h3>Concession</h3>
+                                <p>From $23.95</p>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn" data-action="decrease" data-ticket="concession">-</button>
+                                <span class="quantity-display" data-ticket="concession">0</span>
+                                <button class="quantity-btn" data-action="increase" data-ticket="concession">+</button>
+                            </div>
+                        </div>
+                        <div class="ticket-selector">
+                            <div class="ticket-info">
+                                <h3>Infants (3 & Under)</h3>
+                                <p>Free</p>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn" data-action="decrease" data-ticket="infant">-</button>
+                                <span class="quantity-display" data-ticket="infant">0</span>
+                                <button class="quantity-btn" data-action="increase" data-ticket="infant">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-summary">
+                    <div class="summary-card">
+                        <div class="experience-image">
+                            <img src="file:///Users/damiansimpkins/Desktop/placeholder-image.png" alt="General Visit - Museum Interior" style="width: 100%; height: 246px; object-fit: cover; border-radius: 4px;">
+                        </div>
+                        <div class="summary-content">
+                            <h2>General Visit</h2>
+                            <div class="summary-section">
+                                <div class="section-divider"></div>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur. Leo laoreet ut facilisis pellentesque dolor at. Tincidunt lorem a diam nunc sit et quam.</p>
+                            </div>
+                            <div class="summary-section tickets-summary" style="display: none;">
+                                <div class="section-divider"></div>
+                                <div class="section-header">
+                                    <h3>Tickets</h3>
+                                </div>
+                                <div class="ticket-breakdown">
+                                    <!-- Ticket details will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-total" style="display: none;">
+                            <div class="total-content">
+                                <div class="total-info">
+                                    <h3>Order total <span class="gst-note">(Inc GST)</span></h3>
+                                    <span class="total-amount">$0.00</span>
+                                </div>
+                                <button class="btn btn-sunshine btn-large book-now-btn">Book now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="booking-footer">
+                <div class="footer-content">
+                    <p>Need some assistance? <a href="#contact">Contact us</a> | <a href="tel:+61282747777">+61 2 8274 7777</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

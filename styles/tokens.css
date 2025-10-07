@@ -1,0 +1,260 @@
+/* Complete Primitive Design Tokens - From Figma Primitive.json */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* DEEP-BLUE COLOR FAMILY */
+  --deep-blue-00: rgba(0, 6, 79, 1); /* #00064F */
+  --deep-blue-01: rgba(0, 6, 71, 1); /* #000647 */
+  --deep-blue-02: rgba(0, 9, 107, 1); /* #00096B */
+  --deep-blue-03: rgba(0, 12, 138, 1); /* #000C8A */
+  --deep-blue-04: rgba(0, 14, 169, 1); /* #000EA9 */
+  --deep-blue-05: rgba(0, 19, 231, 1); /* #0013E7 */
+
+  /* Deep Blue Opacity Variants */
+  --deep-blue-0: rgba(0, 0, 0, 0); /* Transparent */
+  --deep-blue-5: rgba(0, 6, 79, 0.05);
+  --deep-blue-10: rgba(0, 6, 79, 0.1);
+  --deep-blue-20: rgba(0, 6, 79, 0.2);
+  --deep-blue-30: rgba(0, 6, 79, 0.3);
+  --deep-blue-40: rgba(0, 6, 79, 0.4);
+  --deep-blue-50: rgba(0, 6, 79, 0.5);
+  --deep-blue-60: rgba(0, 6, 79, 0.6);
+  --deep-blue-70: rgba(0, 6, 79, 0.7);
+  --deep-blue-80: rgba(0, 6, 79, 0.8);
+  --deep-blue-90: rgba(0, 6, 79, 0.9);
+  --deep-blue-100: rgba(0, 6, 79, 1);
+
+  /* TURQUOISE COLOR FAMILY */
+  --turquoise-00: rgba(0, 180, 171, 1); /* #00B4AB */
+  --turquoise-01: rgba(0, 166, 157, 1); /* #00A69D */
+  --turquoise-02: rgba(0, 202, 192, 1); /* #00CAC0 */
+  --turquoise-03: rgba(0, 226, 215, 1); /* #00E2D7 */
+  --turquoise-04: rgba(0, 250, 237, 1); /* #00FAED */
+  --turquoise-05: rgba(113, 255, 248, 1); /* #71FFF8 */
+
+  /* SUNSHINE COLOR FAMILY */
+  --sunshine-00: rgba(252, 197, 90, 1); /* #FCC55A */
+  --sunshine-01: rgba(252, 178, 40, 1); /* #FCB228 */
+  --sunshine-02: rgba(252, 187, 64, 1); /* #FCBB40 */
+  --sunshine-03: rgba(252, 200, 100, 1); /* #FCC864 */
+  --sunshine-04: rgba(254, 204, 112, 1); /* #FECC70 */
+  --sunshine-05: rgba(254, 213, 136, 1); /* #FED588 */
+
+  /* BRIDGE-GREY COLOR FAMILY */
+  --bridge-grey-00: rgba(64, 68, 81, 1); /* #404451 */
+  --bridge-grey-01: rgba(54, 57, 69, 1); /* #363945 */
+  --bridge-grey-02: rgba(74, 79, 95, 1); /* #4A4F5F */
+  --bridge-grey-03: rgba(86, 91, 109, 1); /* #565B6D */
+  --bridge-grey-04: rgba(97, 104, 124, 1); /* #61687C */
+  --bridge-grey-05: rgba(123, 129, 151, 1); /* #7B8197 */
+
+  /* HARBOUR-BLUE COLOR FAMILY */
+  --harbour-blue-00: rgba(51, 51, 232, 1); /* #3333E8 */
+  --harbour-blue-01: rgba(18, 18, 162, 1); /* #1212A2 */
+  --harbour-blue-02: rgba(22, 22, 198, 1); /* #1616C6 */
+  --harbour-blue-03: rgba(24, 24, 216, 1); /* #1818D8 */
+  --harbour-blue-04: rgba(30, 30, 230, 1); /* #1E1EE6 */
+  --harbour-blue-05: rgba(63, 63, 234, 1); /* #3F3FEA */
+
+  /* GRANITE COLOR FAMILY */
+  --granite-00: rgba(204, 186, 170, 1); /* #CCBAAA */
+  --granite-01: rgba(173, 144, 119, 1); /* #AD9077 */
+  --granite-02: rgba(183, 158, 136, 1); /* #B79E88 */
+  --granite-03: rgba(207, 190, 175, 1); /* #CFBEAF */
+  --granite-04: rgba(214, 200, 187, 1); /* #D6C8BB */
+  --granite-05: rgba(222, 210, 200, 1); /* #DED2C8 */
+
+  /* NEUTRAL FOUNDATION COLORS */
+  --off-white-00: rgba(242, 242, 242, 1); /* #F2F2F2 */
+  --asphalt-00: rgba(26, 26, 26, 1); /* #1A1A1A */
+
+  /* SYSTEM WHITE COLORS */
+  --white-100: rgba(255, 255, 255, 1); /* #FFFFFF */
+  --white-90: rgba(255, 255, 255, 0.9);
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-70: rgba(255, 255, 255, 0.7);
+  --white-60: rgba(255, 255, 255, 0.6);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-40: rgba(255, 255, 255, 0.4);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --white-15: rgba(255, 255, 255, 0.15);
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-5: rgba(255, 255, 255, 0.05);
+
+  /* SYSTEM BLACK COLORS */
+  --black-100: rgba(0, 0, 0, 1); /* #000000 */
+  --black-90: rgba(0, 0, 0, 0.9);
+  --black-80: rgba(0, 0, 0, 0.8);
+  --black-70: rgba(0, 0, 0, 0.7);
+  --black-60: rgba(0, 0, 0, 0.6);
+  --black-50: rgba(0, 0, 0, 0.5);
+  --black-40: rgba(0, 0, 0, 0.4);
+  --black-30: rgba(0, 0, 0, 0.3);
+  --black-20: rgba(0, 0, 0, 0.2);
+  --black-15: rgba(0, 0, 0, 0.15);
+  --black-10: rgba(0, 0, 0, 0.1);
+  --black-5: rgba(0, 0, 0, 0.05);
+
+  /* TYPOGRAPHY TOKENS */
+  --font-family-primary: 'Funnel Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Font Sizes */
+  --text-6xl: 60px;
+  --text-5xl: 48px;
+  --text-4xl: 40px;
+  --text-3xl: 32px;
+  --text-2xl: 26px;
+  --text-xl: 20px;
+  --text-base: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+
+  /* Letter Spacing */
+  --letter-spacing-normal: 0;
+
+  /* SPACING SCALE */
+  --space-0: 0px;
+  --space-05: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-25: 100px;
+  --space-30: 120px;
+
+  /* BORDER RADIUS */
+  --radius-button: 48px;
+  --radius-image: 4px;
+  --radius-panel: 4px;
+  --radius-form: 4px;
+
+  /* SEMANTIC TOKEN MAPPINGS */
+
+  /* Typography Semantic Tokens */
+  --typography-header-family: var(--font-family-primary);
+  --typography-header-weight: var(--font-weight-bold);
+  --typography-header-spacing: var(--letter-spacing-normal);
+
+  --typography-subheading-family: var(--font-family-primary);
+  --typography-subheading-weight: var(--font-weight-bold);
+  --typography-subheading-spacing: var(--letter-spacing-normal);
+
+  --typography-body-family: var(--font-family-primary);
+  --typography-body-weight: var(--font-weight-light);
+  --typography-body-spacing: var(--letter-spacing-normal);
+
+  --typography-button-family: var(--font-family-primary);
+  --typography-button-weight: var(--font-weight-bold);
+  --typography-button-spacing: var(--letter-spacing-normal);
+
+  --typography-nav-primary-family: var(--font-family-primary);
+  --typography-nav-primary-weight: var(--font-weight-medium);
+  --typography-nav-primary-spacing: var(--letter-spacing-normal);
+
+  --typography-nav-secondary-family: var(--font-family-primary);
+  --typography-nav-secondary-weight: var(--font-weight-light);
+  --typography-nav-secondary-spacing: var(--letter-spacing-normal);
+
+  --typography-nav-menu-family: var(--font-family-primary);
+  --typography-nav-menu-weight: var(--font-weight-light);
+  --typography-nav-menu-spacing: var(--letter-spacing-normal);
+
+  /* Text Colors */
+  --text-primary: var(--deep-blue-00);
+  --text-secondary: var(--bridge-grey-01);
+  --text-inverse: var(--off-white-00);
+  --text-link: var(--deep-blue-00);
+  --text-highlight: var(--turquoise-00);
+  --text-error: var(--turquoise-00);
+
+  /* Background Colors */
+  --bkg-base-primary: var(--off-white-00);
+  --bkg-base-secondary: var(--black-5);
+  --bkg-dark-primary: var(--deep-blue-00);
+  --bkg-dark-secondary: var(--deep-blue-01);
+  --bkg-highlight-primary: var(--turquoise-00);
+
+  /* Icon Colors */
+  --icon-primary: var(--deep-blue-00);
+  --icon-inverse: var(--off-white-00);
+  --icon-highlight: var(--turquoise-00);
+
+  /* Border Colors */
+  --brd-base-primary: var(--deep-blue-10);
+  --brd-dark-primary: var(--white-15);
+  --brd-dark-secondary: var(--white-20);
+
+  /* Button Colors - Primary Turquoise */
+  --btn-primary-turquoise-bg: var(--turquoise-00);
+  --btn-primary-turquoise-bg-hover: var(--turquoise-03);
+  --btn-primary-turquoise-border: var(--turquoise-00);
+  --btn-primary-turquoise-border-hover: var(--turquoise-03);
+  --btn-primary-turquoise-text: var(--deep-blue-00);
+  --btn-primary-turquoise-text-hover: var(--deep-blue-00);
+
+  /* Button Colors - Primary Sunshine */
+  --btn-primary-sunshine-bg: var(--sunshine-00);
+  --btn-primary-sunshine-bg-hover: var(--sunshine-04);
+  --btn-primary-sunshine-border: var(--sunshine-00);
+  --btn-primary-sunshine-border-hover: var(--sunshine-04);
+  --btn-primary-sunshine-text: var(--deep-blue-00);
+  --btn-primary-sunshine-text-hover: var(--deep-blue-00);
+
+  /* Button Colors - Secondary on Light */
+  --btn-secondary-light-bg: var(--deep-blue-00);
+  --btn-secondary-light-bg-hover: var(--deep-blue-02);
+  --btn-secondary-light-border: var(--deep-blue-00);
+  --btn-secondary-light-border-hover: var(--deep-blue-02);
+  --btn-secondary-light-text: var(--white-100);
+  --btn-secondary-light-text-hover: var(--off-white-00);
+
+  /* Button Colors - Secondary on Dark */
+  --btn-secondary-dark-bg: var(--white-100);
+  --btn-secondary-dark-bg-hover: var(--white-80);
+  --btn-secondary-dark-border: var(--white-100);
+  --btn-secondary-dark-border-hover: var(--white-5);
+  --btn-secondary-dark-text: var(--deep-blue-00);
+  --btn-secondary-dark-text-hover: var(--deep-blue-00);
+
+  /* Button Colors - Ghost */
+  --btn-ghost-light-text: var(--deep-blue-00);
+  --btn-ghost-light-text-hover: var(--deep-blue-00);
+  --btn-ghost-dark-text: var(--off-white-00);
+  --btn-ghost-dark-text-hover: var(--off-white-00);
+
+  /* Button Colors - Overlay */
+  --btn-overlay-bg: var(--black-50);
+  --btn-overlay-bg-hover: var(--black-70);
+  --btn-overlay-text: var(--off-white-00);
+  --btn-overlay-text-hover: var(--off-white-00);
+
+  /* Button Colors - Grey */
+  --btn-grey-bg: var(--bridge-grey-02);
+  --btn-grey-bg-hover: var(--bridge-grey-03);
+  --btn-grey-border: var(--bridge-grey-02);
+  --btn-grey-border-hover: var(--bridge-grey-03);
+  --btn-grey-text: var(--white-100);
+  --btn-grey-text-hover: var(--white-100);
+
+  /* Utilities */
+  --scrim-light: var(--black-50);
+}

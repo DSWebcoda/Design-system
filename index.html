@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">
+            <h2>Design System</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#overview" class="nav-link active">Overview</a></li>
+
+            <li class="nav-section-header collapsible-header" data-section="foundations">
+                <span class="section-title">Foundations</span>
+                <img src="icons/material-symbols_keyboard-arrow-up.svg" alt="Collapse" class="collapse-icon">
+            </li>
+            <div class="nav-section-content" data-section-content="foundations">
+                <li><a href="#tokens" class="nav-link">Tokens</a></li>
+                <li><a href="#colors" class="nav-link">Colours</a></li>
+                <li><a href="#typography" class="nav-link">Typography</a></li>
+                <li><a href="#spacing" class="nav-link">Spacing</a></li>
+                <li><a href="#icons" class="nav-link">Icons</a></li>
+            </div>
+
+            <li class="nav-section-header collapsible-header" data-section="components">
+                <span class="section-title">Components</span>
+                <img src="icons/material-symbols_keyboard-arrow-up.svg" alt="Collapse" class="collapse-icon">
+            </li>
+            <div class="nav-section-content" data-section-content="components">
+                <li><a href="#buttons" class="nav-link">Buttons</a></li>
+                <li><a href="#forms" class="nav-link">Forms</a></li>
+                <li><a href="#cards" class="nav-link">Cards</a></li>
+                <li><a href="#calendar" class="nav-link">Calendar</a></li>
+                <li><a href="#accordion" class="nav-link">Accordion</a></li>
+            </div>
+
+            <li class="nav-section-header collapsible-header" data-section="sections">
+                <span class="section-title">Sections</span>
+                <img src="icons/material-symbols_keyboard-arrow-up.svg" alt="Collapse" class="collapse-icon">
+            </li>
+            <div class="nav-section-content" data-section-content="sections">
+            </div>
+
+            <li class="nav-section-header collapsible-header" data-section="examples">
+                <span class="section-title">Page Examples</span>
+                <img src="icons/material-symbols_keyboard-arrow-up.svg" alt="Collapse" class="collapse-icon">
+            </li>
+            <div class="nav-section-content" data-section-content="examples">
+                <li><a href="booking-page.html" class="nav-link page-example" target="_blank">Booking Example</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section id="overview" class="section active">
+            <div class="hero-image" style="margin-bottom: 2rem;">
+                <img src="file:///Users/damiansimpkins/Desktop/placeholder-image.png" alt="Design system hero image" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;">
+            </div>
+
+            <h1>Design System Overview</h1>
+            <p>Welcome to our comprehensive design system. This system provides a unified set of design principles, components, and guidelines to ensure consistency across all our products.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Consistent</h3>
+                    <p>Unified visual language across all platforms and products.</p>
+                </div>
+                <div class="card">
+                    <h3>Scalable</h3>
+                    <p>Components that grow with your product needs.</p>
+                </div>
+                <div class="card">
+                    <h3>Accessible</h3>
+                    <p>Built with accessibility standards in mind from the ground up.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tokens" class="section">
+            <h1>Design Tokens</h1>
+            <p>Core design tokens organized by category. Click any token to copy the CSS variable to clipboard.</p>
+
+            <div class="tokens-section">
+                <h2>Color Tokens</h2>
+
+
+                <div class="token-category">
+                    <h3>Text Colors</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--text-primary" data-value="var(--deep-blue-00)">
+                            <div class="token-swatch" style="background-color: var(--text-primary);"></div>
+                            <span class="token-name">--text-primary</span>
+                            <span class="token-mapping">→ --deep-blue-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-secondary" data-value="var(--bridge-grey-01)">
+                            <div class="token-swatch" style="background-color: var(--text-secondary);"></div>
+                            <span class="token-name">--text-secondary</span>
+                            <span class="token-mapping">→ --bridge-grey-01</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-inverse" data-value="var(--off-white-00)">
+                            <div class="token-swatch" style="background-color: var(--text-inverse);"></div>
+                            <span class="token-name">--text-inverse</span>
+                            <span class="token-mapping">→ --off-white-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-link" data-value="var(--deep-blue-00)">
+                            <div class="token-swatch" style="background-color: var(--text-link);"></div>
+                            <span class="token-name">--text-link</span>
+                            <span class="token-mapping">→ --deep-blue-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-highlight" data-value="var(--turquoise-00)">
+                            <div class="token-swatch" style="background-color: var(--text-highlight);"></div>
+                            <span class="token-name">--text-highlight</span>
+                            <span class="token-mapping">→ --turquoise-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-error" data-value="var(--turquoise-00)">
+                            <div class="token-swatch" style="background-color: var(--text-error);"></div>
+                            <span class="token-name">--text-error</span>
+                            <span class="token-mapping">→ --turquoise-00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="token-category">
+                    <h3>Background Colors</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--bkg-base-primary" data-value="var(--off-white-00)">
+                            <div class="token-swatch" style="background-color: var(--bkg-base-primary);"></div>
+                            <span class="token-name">--bkg-base-primary</span>
+                            <span class="token-mapping">→ --off-white-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--bkg-base-secondary" data-value="var(--black-5)">
+                            <div class="token-swatch" style="background-color: var(--bkg-base-secondary);"></div>
+                            <span class="token-name">--bkg-base-secondary</span>
+                            <span class="token-mapping">→ --black-5</span>
+                        </div>
+                        <div class="token-item-text" data-token="--bkg-dark-primary" data-value="var(--deep-blue-00)">
+                            <div class="token-swatch" style="background-color: var(--bkg-dark-primary);"></div>
+                            <span class="token-name">--bkg-dark-primary</span>
+                            <span class="token-mapping">→ --deep-blue-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--bkg-dark-secondary" data-value="var(--deep-blue-01)">
+                            <div class="token-swatch" style="background-color: var(--bkg-dark-secondary);"></div>
+                            <span class="token-name">--bkg-dark-secondary</span>
+                            <span class="token-mapping">→ --deep-blue-01</span>
+                        </div>
+                        <div class="token-item-text" data-token="--bkg-highlight-primary" data-value="var(--turquoise-00)">
+                            <div class="token-swatch" style="background-color: var(--bkg-highlight-primary);"></div>
+                            <span class="token-name">--bkg-highlight-primary</span>
+                            <span class="token-mapping">→ --turquoise-00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="token-category">
+                    <h3>Icon Colors</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--icon-primary" data-value="var(--deep-blue-00)">
+                            <div class="token-swatch" style="background-color: var(--icon-primary);"></div>
+                            <span class="token-name">--icon-primary</span>
+                            <span class="token-mapping">→ --deep-blue-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--icon-inverse" data-value="var(--off-white-00)">
+                            <div class="token-swatch" style="background-color: var(--icon-inverse);"></div>
+                            <span class="token-name">--icon-inverse</span>
+                            <span class="token-mapping">→ --off-white-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--icon-highlight" data-value="var(--turquoise-00)">
+                            <div class="token-swatch" style="background-color: var(--icon-highlight);"></div>
+                            <span class="token-name">--icon-highlight</span>
+                            <span class="token-mapping">→ --turquoise-00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="token-category">
+                    <h3>Border Colors</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--brd-base-primary" data-value="var(--deep-blue-10)">
+                            <div class="token-swatch" style="background-color: var(--brd-base-primary);"></div>
+                            <span class="token-name">--brd-base-primary</span>
+                            <span class="token-mapping">→ --deep-blue-10</span>
+                        </div>
+                        <div class="token-item-text" data-token="--brd-dark-primary" data-value="var(--white-15)">
+                            <div class="token-swatch" style="background-color: var(--brd-dark-primary);"></div>
+                            <span class="token-name">--brd-dark-primary</span>
+                            <span class="token-mapping">→ --white-15</span>
+                        </div>
+                        <div class="token-item-text" data-token="--brd-dark-secondary" data-value="var(--white-20)">
+                            <div class="token-swatch" style="background-color: var(--brd-dark-secondary);"></div>
+                            <span class="token-name">--brd-dark-secondary</span>
+                            <span class="token-mapping">→ --white-20</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="token-category">
+                    <h3>Button Colors - Primary</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--btn-primary-turquoise-bg" data-value="var(--turquoise-00)">
+                            <div class="token-swatch" style="background-color: var(--btn-primary-turquoise-bg);"></div>
+                            <span class="token-name">--btn-primary-turquoise-bg</span>
+                            <span class="token-mapping">→ --turquoise-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--btn-primary-turquoise-text" data-value="var(--deep-blue-00)">
+                            <div class="token-swatch" style="background-color: var(--btn-primary-turquoise-text);"></div>
+                            <span class="token-name">--btn-primary-turquoise-text</span>
+                            <span class="token-mapping">→ --deep-blue-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--btn-primary-sunshine-bg" data-value="var(--sunshine-00)">
+                            <div class="token-swatch" style="background-color: var(--btn-primary-sunshine-bg);"></div>
+                            <span class="token-name">--btn-primary-sunshine-bg</span>
+                            <span class="token-mapping">→ --sunshine-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--btn-primary-sunshine-text" data-value="var(--deep-blue-00)">
+                            <div class="token-swatch" style="background-color: var(--btn-primary-sunshine-text);"></div>
+                            <span class="token-name">--btn-primary-sunshine-text</span>
+                            <span class="token-mapping">→ --deep-blue-00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="token-category">
+                    <h3>Button Colors - Secondary</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--btn-secondary-light-bg" data-value="var(--deep-blue-00)">
+                            <div class="token-swatch" style="background-color: var(--btn-secondary-light-bg);"></div>
+                            <span class="token-name">--btn-secondary-light-bg</span>
+                            <span class="token-mapping">→ --deep-blue-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--btn-secondary-light-text" data-value="var(--white-100)">
+                            <div class="token-swatch" style="background-color: var(--btn-secondary-light-text);"></div>
+                            <span class="token-name">--btn-secondary-light-text</span>
+                            <span class="token-mapping">→ --white-100</span>
+                        </div>
+                        <div class="token-item-text" data-token="--btn-secondary-dark-bg" data-value="var(--white-100)">
+                            <div class="token-swatch" style="background-color: var(--btn-secondary-dark-bg);"></div>
+                            <span class="token-name">--btn-secondary-dark-bg</span>
+                            <span class="token-mapping">→ --white-100</span>
+                        </div>
+                        <div class="token-item-text" data-token="--btn-secondary-dark-text" data-value="var(--deep-blue-00)">
+                            <div class="token-swatch" style="background-color: var(--btn-secondary-dark-text);"></div>
+                            <span class="token-name">--btn-secondary-dark-text</span>
+                            <span class="token-mapping">→ --deep-blue-00</span>
+                        </div>
+                        <div class="token-item-text" data-token="--btn-grey-bg" data-value="var(--bridge-grey-02)">
+                            <div class="token-swatch" style="background-color: var(--btn-grey-bg);"></div>
+                            <span class="token-name">--btn-grey-bg</span>
+                            <span class="token-mapping">→ --bridge-grey-02</span>
+                        </div>
+                        <div class="token-item-text" data-token="--btn-grey-text" data-value="var(--white-100)">
+                            <div class="token-swatch" style="background-color: var(--btn-grey-text);"></div>
+                            <span class="token-name">--btn-grey-text</span>
+                            <span class="token-mapping">→ --white-100</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tokens-section">
+                <h2>Typography Tokens</h2>
+
+                <div class="token-category">
+                    <h3>Font Family</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--font-family-primary" data-value="'Funnel Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+                            <span class="token-name">--font-family-primary</span>
+                            <span class="token-mapping">Funnel Display</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="token-category">
+                    <h3>Font Weights</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--font-weight-light" data-value="300">
+                            <span class="token-name">--font-weight-light</span>
+                            <span class="token-mapping">300</span>
+                        </div>
+                        <div class="token-item-text" data-token="--font-weight-regular" data-value="400">
+                            <span class="token-name">--font-weight-regular</span>
+                            <span class="token-mapping">400</span>
+                        </div>
+                        <div class="token-item-text" data-token="--font-weight-medium" data-value="500">
+                            <span class="token-name">--font-weight-medium</span>
+                            <span class="token-mapping">500</span>
+                        </div>
+                        <div class="token-item-text" data-token="--font-weight-semibold" data-value="600">
+                            <span class="token-name">--font-weight-semibold</span>
+                            <span class="token-mapping">600</span>
+                        </div>
+                        <div class="token-item-text" data-token="--font-weight-bold" data-value="700">
+                            <span class="token-name">--font-weight-bold</span>
+                            <span class="token-mapping">700</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="token-category">
+                    <h3>Font Sizes</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--text-6xl" data-value="60px">
+                            <span class="token-name">--text-6xl</span>
+                            <span class="token-mapping">60px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-5xl" data-value="48px">
+                            <span class="token-name">--text-5xl</span>
+                            <span class="token-mapping">48px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-4xl" data-value="40px">
+                            <span class="token-name">--text-4xl</span>
+                            <span class="token-mapping">40px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-3xl" data-value="32px">
+                            <span class="token-name">--text-3xl</span>
+                            <span class="token-mapping">32px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-2xl" data-value="26px">
+                            <span class="token-name">--text-2xl</span>
+                            <span class="token-mapping">26px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-xl" data-value="20px">
+                            <span class="token-name">--text-xl</span>
+                            <span class="token-mapping">20px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-base" data-value="16px">
+                            <span class="token-name">--text-base</span>
+                            <span class="token-mapping">16px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-sm" data-value="14px">
+                            <span class="token-name">--text-sm</span>
+                            <span class="token-mapping">14px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--text-xs" data-value="12px">
+                            <span class="token-name">--text-xs</span>
+                            <span class="token-mapping">12px</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="token-category">
+                    <h3>Semantic Typography</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--typography-header-family" data-value="var(--font-family-primary)">
+                            <span class="token-name">--typography-header-family</span>
+                            <span class="token-mapping">→ --font-family-primary</span>
+                        </div>
+                        <div class="token-item-text" data-token="--typography-header-weight" data-value="var(--font-weight-bold)">
+                            <span class="token-name">--typography-header-weight</span>
+                            <span class="token-mapping">→ --font-weight-bold</span>
+                        </div>
+                        <div class="token-item-text" data-token="--typography-body-family" data-value="var(--font-family-primary)">
+                            <span class="token-name">--typography-body-family</span>
+                            <span class="token-mapping">→ --font-family-primary</span>
+                        </div>
+                        <div class="token-item-text" data-token="--typography-body-weight" data-value="var(--font-weight-light)">
+                            <span class="token-name">--typography-body-weight</span>
+                            <span class="token-mapping">→ --font-weight-light</span>
+                        </div>
+                        <div class="token-item-text" data-token="--typography-button-family" data-value="var(--font-family-primary)">
+                            <span class="token-name">--typography-button-family</span>
+                            <span class="token-mapping">→ --font-family-primary</span>
+                        </div>
+                        <div class="token-item-text" data-token="--typography-button-weight" data-value="var(--font-weight-bold)">
+                            <span class="token-name">--typography-button-weight</span>
+                            <span class="token-mapping">→ --font-weight-bold</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tokens-section">
+                <h2>Spacing Tokens</h2>
+
+                <div class="token-category">
+                    <h3>Spacing Scale</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--space-0" data-value="0px">
+                            <span class="token-name">--space-0</span>
+                            <span class="token-mapping">0px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-05" data-value="2px">
+                            <span class="token-name">--space-05</span>
+                            <span class="token-mapping">2px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-1" data-value="4px">
+                            <span class="token-name">--space-1</span>
+                            <span class="token-mapping">4px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-2" data-value="8px">
+                            <span class="token-name">--space-2</span>
+                            <span class="token-mapping">8px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-3" data-value="12px">
+                            <span class="token-name">--space-3</span>
+                            <span class="token-mapping">12px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-4" data-value="16px">
+                            <span class="token-name">--space-4</span>
+                            <span class="token-mapping">16px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-5" data-value="20px">
+                            <span class="token-name">--space-5</span>
+                            <span class="token-mapping">20px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-6" data-value="24px">
+                            <span class="token-name">--space-6</span>
+                            <span class="token-mapping">24px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-7" data-value="32px">
+                            <span class="token-name">--space-7</span>
+                            <span class="token-mapping">32px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-10" data-value="40px">
+                            <span class="token-name">--space-10</span>
+                            <span class="token-mapping">40px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-12" data-value="48px">
+                            <span class="token-name">--space-12</span>
+                            <span class="token-mapping">48px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-24" data-value="96px">
+                            <span class="token-name">--space-24</span>
+                            <span class="token-mapping">96px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--space-30" data-value="120px">
+                            <span class="token-name">--space-30</span>
+                            <span class="token-mapping">120px</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="token-category">
+                    <h3>Border Radius</h3>
+                    <div class="token-list-clean">
+                        <div class="token-item-text" data-token="--radius-button" data-value="48px">
+                            <span class="token-name">--radius-button</span>
+                            <span class="token-mapping">48px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--radius-image" data-value="4px">
+                            <span class="token-name">--radius-image</span>
+                            <span class="token-mapping">4px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--radius-panel" data-value="4px">
+                            <span class="token-name">--radius-panel</span>
+                            <span class="token-mapping">4px</span>
+                        </div>
+                        <div class="token-item-text" data-token="--radius-form" data-value="4px">
+                            <span class="token-name">--radius-form</span>
+                            <span class="token-mapping">4px</span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="colors" class="section">
+            <h1>Complete Colour System</h1>
+            <p>Our comprehensive primitive colour system with 8 colour families and complete opacity variants. Over 90+ colours total from the Figma primitive tokens.</p>
+
+            <div class="color-section">
+                <h2>Deep Blue - Complete Scale (Primary Brand)</h2>
+                <div class="color-grid">
+                    <div class="color-swatch deep-blue-00" data-color="#00064F" data-name="Deep Blue 00"></div>
+                    <div class="color-swatch deep-blue-01" data-color="#000647" data-name="Deep Blue 01"></div>
+                    <div class="color-swatch deep-blue-02" data-color="#00096B" data-name="Deep Blue 02"></div>
+                    <div class="color-swatch deep-blue-03" data-color="#000C8A" data-name="Deep Blue 03"></div>
+                    <div class="color-swatch deep-blue-04" data-color="#000EA9" data-name="Deep Blue 04"></div>
+                    <div class="color-swatch deep-blue-05" data-color="#0013E7" data-name="Deep Blue 05"></div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h2>Turquoise - Complete Scale (Interactive & Highlights)</h2>
+                <div class="color-grid">
+                    <div class="color-swatch turquoise-00" data-color="#00B4AB" data-name="Turquoise 00"></div>
+                    <div class="color-swatch turquoise-01" data-color="#00A69D" data-name="Turquoise 01"></div>
+                    <div class="color-swatch turquoise-02" data-color="#00CAC0" data-name="Turquoise 02"></div>
+                    <div class="color-swatch turquoise-03" data-color="#00E2D7" data-name="Turquoise 03"></div>
+                    <div class="color-swatch turquoise-04" data-color="#00FAED" data-name="Turquoise 04"></div>
+                    <div class="color-swatch turquoise-05" data-color="#71FFF8" data-name="Turquoise 05"></div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h2>Sunshine - Complete Scale (Accent & Warmth)</h2>
+                <div class="color-grid">
+                    <div class="color-swatch sunshine-00" data-color="#FCC55A" data-name="Sunshine 00"></div>
+                    <div class="color-swatch sunshine-01" data-color="#FCB228" data-name="Sunshine 01"></div>
+                    <div class="color-swatch sunshine-02" data-color="#FCBB40" data-name="Sunshine 02"></div>
+                    <div class="color-swatch sunshine-03" data-color="#FCC864" data-name="Sunshine 03"></div>
+                    <div class="color-swatch sunshine-04" data-color="#FECC70" data-name="Sunshine 04"></div>
+                    <div class="color-swatch sunshine-05" data-color="#FED588" data-name="Sunshine 05"></div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h2>Bridge Grey - Complete Scale (Text & UI)</h2>
+                <div class="color-grid">
+                    <div class="color-swatch bridge-grey-00" data-color="#404451" data-name="Bridge Grey 00"></div>
+                    <div class="color-swatch bridge-grey-01" data-color="#363945" data-name="Bridge Grey 01"></div>
+                    <div class="color-swatch bridge-grey-02" data-color="#4A4F5F" data-name="Bridge Grey 02"></div>
+                    <div class="color-swatch bridge-grey-03" data-color="#565B6D" data-name="Bridge Grey 03"></div>
+                    <div class="color-swatch bridge-grey-04" data-color="#61687C" data-name="Bridge Grey 04"></div>
+                    <div class="color-swatch bridge-grey-05" data-color="#7B8197" data-name="Bridge Grey 05"></div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h2>Harbour Blue - Complete Scale (Secondary Blues)</h2>
+                <div class="color-grid">
+                    <div class="color-swatch harbour-blue-00" data-color="#3333E8" data-name="Harbour Blue 00"></div>
+                    <div class="color-swatch harbour-blue-01" data-color="#1212A2" data-name="Harbour Blue 01"></div>
+                    <div class="color-swatch harbour-blue-02" data-color="#1616C6" data-name="Harbour Blue 02"></div>
+                    <div class="color-swatch harbour-blue-03" data-color="#1818D8" data-name="Harbour Blue 03"></div>
+                    <div class="color-swatch harbour-blue-04" data-color="#1E1EE6" data-name="Harbour Blue 04"></div>
+                    <div class="color-swatch harbour-blue-05" data-color="#3F3FEA" data-name="Harbour Blue 05"></div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h2>Granite - Complete Scale (Natural & Warm)</h2>
+                <div class="color-grid">
+                    <div class="color-swatch granite-00" data-color="#CCBAAA" data-name="Granite 00"></div>
+                    <div class="color-swatch granite-01" data-color="#AD9077" data-name="Granite 01"></div>
+                    <div class="color-swatch granite-02" data-color="#B79E88" data-name="Granite 02"></div>
+                    <div class="color-swatch granite-03" data-color="#CFBEAF" data-name="Granite 03"></div>
+                    <div class="color-swatch granite-04" data-color="#D6C8BB" data-name="Granite 04"></div>
+                    <div class="color-swatch granite-05" data-color="#DED2C8" data-name="Granite 05"></div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h2>Neutral Foundation</h2>
+                <div class="color-grid">
+                    <div class="color-swatch off-white-00" data-color="#F2F2F2" data-name="Off White 00"></div>
+                    <div class="color-swatch asphalt-00" data-color="#1A1A1A" data-name="Asphalt 00"></div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h2>System Colors - White Scale</h2>
+                <div class="color-grid">
+                    <div class="color-swatch white-100" data-color="#FFFFFF" data-name="White 100%"></div>
+                    <div class="color-swatch white-90" data-color="rgba(255,255,255,0.9)" data-name="White 90%"></div>
+                    <div class="color-swatch white-80" data-color="rgba(255,255,255,0.8)" data-name="White 80%"></div>
+                    <div class="color-swatch white-70" data-color="rgba(255,255,255,0.7)" data-name="White 70%"></div>
+                    <div class="color-swatch white-60" data-color="rgba(255,255,255,0.6)" data-name="White 60%"></div>
+                    <div class="color-swatch white-50" data-color="rgba(255,255,255,0.5)" data-name="White 50%"></div>
+                    <div class="color-swatch white-40" data-color="rgba(255,255,255,0.4)" data-name="White 40%"></div>
+                    <div class="color-swatch white-30" data-color="rgba(255,255,255,0.3)" data-name="White 30%"></div>
+                    <div class="color-swatch white-20" data-color="rgba(255,255,255,0.2)" data-name="White 20%"></div>
+                    <div class="color-swatch white-15" data-color="rgba(255,255,255,0.15)" data-name="White 15%"></div>
+                    <div class="color-swatch white-10" data-color="rgba(255,255,255,0.1)" data-name="White 10%"></div>
+                    <div class="color-swatch white-5" data-color="rgba(255,255,255,0.05)" data-name="White 5%"></div>
+                </div>
+            </div>
+
+            <div class="color-section">
+                <h2>System Colors - Black Scale</h2>
+                <div class="color-grid">
+                    <div class="color-swatch black-100" data-color="#000000" data-name="Black 100%"></div>
+                    <div class="color-swatch black-90" data-color="rgba(0,0,0,0.9)" data-name="Black 90%"></div>
+                    <div class="color-swatch black-80" data-color="rgba(0,0,0,0.8)" data-name="Black 80%"></div>
+                    <div class="color-swatch black-70" data-color="rgba(0,0,0,0.7)" data-name="Black 70%"></div>
+                    <div class="color-swatch black-60" data-color="rgba(0,0,0,0.6)" data-name="Black 60%"></div>
+                    <div class="color-swatch black-50" data-color="rgba(0,0,0,0.5)" data-name="Black 50%"></div>
+                    <div class="color-swatch black-40" data-color="rgba(0,0,0,0.4)" data-name="Black 40%"></div>
+                    <div class="color-swatch black-30" data-color="rgba(0,0,0,0.3)" data-name="Black 30%"></div>
+                    <div class="color-swatch black-20" data-color="rgba(0,0,0,0.2)" data-name="Black 20%"></div>
+                    <div class="color-swatch black-15" data-color="rgba(0,0,0,0.15)" data-name="Black 15%"></div>
+                    <div class="color-swatch black-10" data-color="rgba(0,0,0,0.1)" data-name="Black 10%"></div>
+                    <div class="color-swatch black-5" data-color="rgba(0,0,0,0.05)" data-name="Black 5%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="typography" class="section">
+            <h1>Typography System</h1>
+            <p>Our typography system uses Funnel Display with a carefully designed scale and semantic mappings for consistency across all touchpoints.</p>
+
+            <div class="typography-section">
+                <h2>Font Family</h2>
+                <div class="text-sample">
+                    <h3 style="font-family: var(--typography-header-family); font-weight: var(--typography-header-weight); font-size: var(--text-4xl); margin-bottom: 1rem;">Funnel Display</h3>
+                    <p style="font-family: var(--typography-body-family); font-weight: var(--typography-body-weight);">Primary font family used across all text elements. Includes Light (300), Regular (400), Medium (500), Semibold (600), and Bold (700) weights.</p>
+                </div>
+            </div>
+
+            <div class="typography-section">
+                <h2>Typography Scale</h2>
+                <div class="text-sample">
+                    <div class="text-6xl" style="font-family: var(--typography-header-family); font-weight: var(--typography-header-weight); font-size: var(--text-6xl); margin-bottom: 0.5rem;">Text 6XL - 60px</div>
+                    <div class="text-5xl" style="font-family: var(--typography-header-family); font-weight: var(--typography-header-weight); font-size: var(--text-5xl); margin-bottom: 0.5rem;">Text 5XL - 48px</div>
+                    <div class="text-4xl" style="font-family: var(--typography-header-family); font-weight: var(--typography-header-weight); font-size: var(--text-4xl); margin-bottom: 0.5rem;">Text 4XL - 40px</div>
+                    <div class="text-3xl" style="font-family: var(--typography-header-family); font-weight: var(--typography-header-weight); font-size: var(--text-3xl); margin-bottom: 0.5rem;">Text 3XL - 32px</div>
+                    <div class="text-2xl" style="font-family: var(--typography-header-family); font-weight: var(--typography-header-weight); font-size: var(--text-2xl); margin-bottom: 0.5rem;">Text 2XL - 26px</div>
+                    <div class="text-xl" style="font-family: var(--typography-body-family); font-weight: var(--typography-body-weight); font-size: var(--text-xl); margin-bottom: 0.5rem;">Text XL - 20px</div>
+                    <div class="text-base" style="font-family: var(--typography-body-family); font-weight: var(--typography-body-weight); font-size: var(--text-base); margin-bottom: 0.5rem;">Text Base - 16px</div>
+                    <div class="text-sm" style="font-family: var(--typography-body-family); font-weight: var(--typography-body-weight); font-size: var(--text-sm); margin-bottom: 0.5rem;">Text SM - 14px</div>
+                    <div class="text-xs" style="font-family: var(--typography-body-family); font-weight: var(--typography-body-weight); font-size: var(--text-xs); margin-bottom: 0.5rem;">Text XS - 12px</div>
+                </div>
+            </div>
+
+            <div class="typography-section">
+                <h2>Font Weights</h2>
+                <div class="text-sample">
+                    <div style="font-family: var(--typography-header-family); font-weight: var(--font-weight-light); font-size: var(--text-xl); margin-bottom: 0.5rem;">Light (300) - Used for body text and nav secondary</div>
+                    <div style="font-family: var(--typography-header-family); font-weight: var(--font-weight-regular); font-size: var(--text-xl); margin-bottom: 0.5rem;">Regular (400) - Default weight</div>
+                    <div style="font-family: var(--typography-header-family); font-weight: var(--font-weight-medium); font-size: var(--text-xl); margin-bottom: 0.5rem;">Medium (500) - Used for primary navigation</div>
+                    <div style="font-family: var(--typography-header-family); font-weight: var(--font-weight-semibold); font-size: var(--text-xl); margin-bottom: 0.5rem;">Semibold (600) - For emphasis</div>
+                    <div style="font-family: var(--typography-header-family); font-weight: var(--font-weight-bold); font-size: var(--text-xl); margin-bottom: 0.5rem;">Bold (700) - Headers, buttons, and subheadings</div>
+                </div>
+            </div>
+
+            <div class="typography-section">
+                <h2>Semantic Typography</h2>
+                <div class="text-sample">
+                    <h3 style="font-family: var(--typography-header-family); font-weight: var(--typography-header-weight); font-size: var(--text-2xl); margin-bottom: 1rem;">Headers (Funnel Display Bold)</h3>
+                    <p style="font-family: var(--typography-body-family); font-weight: var(--typography-body-weight); margin-bottom: 1rem;">Body text uses Funnel Display Light for optimal readability and a clean, modern appearance.</p>
+                    <button style="font-family: var(--typography-button-family); font-weight: var(--typography-button-weight); padding: 0.75rem 1.5rem; background: var(--btn-primary-turquoise-bg); color: var(--btn-primary-turquoise-text); border: none; border-radius: var(--radius-button); margin-bottom: 1rem;">Button Text (Funnel Display Bold)</button>
+                    <div style="font-family: var(--typography-nav-primary-family); font-weight: var(--typography-nav-primary-weight); margin-bottom: 0.5rem;">Primary Navigation (Funnel Display Medium)</div>
+                    <div style="font-family: var(--typography-nav-secondary-family); font-weight: var(--typography-nav-secondary-weight); margin-bottom: 0.5rem;">Secondary Navigation (Funnel Display Light)</div>
+                </div>
+
+                <div class="typography-example" style="margin-top: 2rem; padding: 2rem; border: 1px solid var(--brd-base-primary); border-radius: 8px; background: var(--bkg-dark-primary);">
+                    <img src="file:///Users/damiansimpkins/Desktop/placeholder-image.png" alt="Typography example" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <h2 style="font-family: var(--typography-header-family); font-weight: var(--typography-header-weight); margin-bottom: 1rem;">Typography Example</h2>
+                    <p style="font-family: var(--typography-body-family); font-weight: var(--typography-body-weight); margin-bottom: 1rem;">This demonstrates how our Funnel Display font family works together to create hierarchy and readability in real-world applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="spacing" class="section">
+            <h1>Spacing & Layout</h1>
+            <p>Our spacing system provides consistent rhythm and visual hierarchy using a systematic scale based on 4px increments.</p>
+
+            <div class="component-section">
+                <h2>Core Spacing Scale</h2>
+                <p>Based on 4px increments for consistent rhythm and alignment.</p>
+
+                <div class="component-example">
+                    <div class="spacing-grid">
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 0px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-0: 0px</span>
+                        </div>
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 4px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-1: 4px</span>
+                        </div>
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 8px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-2: 8px</span>
+                        </div>
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 12px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-3: 12px</span>
+                        </div>
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 16px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-4: 16px</span>
+                        </div>
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 20px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-5: 20px</span>
+                        </div>
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 24px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-6: 24px</span>
+                        </div>
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 32px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-8: 32px</span>
+                        </div>
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 40px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-10: 40px</span>
+                        </div>
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 48px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-12: 48px</span>
+                        </div>
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 64px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-16: 64px</span>
+                        </div>
+                        <div class="spacing-item">
+                            <div class="spacing-demo" style="width: 96px; height: 20px; background: var(--bkg-dark-primary);"></div>
+                            <span>space-24: 96px</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Border Radius</h2>
+                <p>Consistent corner radius values for different UI elements.</p>
+
+                <div class="component-example">
+                    <div class="radius-grid">
+                        <div class="radius-item">
+                            <div class="radius-demo" style="width: 80px; height: 80px; background: var(--bkg-dark-primary); border-radius: var(--radius-panel);"></div>
+                            <span>Panel: 4px</span>
+                        </div>
+                        <div class="radius-item">
+                            <div class="radius-demo" style="width: 120px; height: 40px; background: var(--bkg-dark-primary); border-radius: var(--radius-button);"></div>
+                            <span>Button: 48px</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Spacing in Practice</h2>
+                <p>Examples of how spacing tokens create visual hierarchy and breathing room.</p>
+
+                <div class="component-example">
+                    <div class="spacing-examples">
+                        <div class="spacing-example">
+                            <h3>Component Spacing</h3>
+                            <div class="example-card" style="padding: var(--space-6); margin-bottom: var(--space-4); background: var(--off-white-00); border: 1px solid var(--bridge-grey-05); border-radius: var(--radius-panel);">
+                                <h4 style="margin-bottom: var(--space-3); font-family: var(--typography-header-family); font-weight: var(--typography-header-weight);">Card Title (space-3 below)</h4>
+                                <p style="margin-bottom: var(--space-4); font-family: var(--typography-body-family); font-weight: var(--typography-body-weight); color: var(--text-secondary);">This card demonstrates spacing-6 padding and spacing-4 margins for optimal visual hierarchy.</p>
+                                <button class="btn btn-primary-turquoise btn-small">Action Button</button>
+                            </div>
+                        </div>
+
+                        <div class="spacing-example">
+                            <h3>Layout Spacing</h3>
+                            <div style="display: flex; gap: var(--space-4); align-items: center; padding: var(--space-5); background: var(--off-white-00); border-radius: var(--radius-panel); border: 1px solid var(--bridge-grey-05);">
+                                <div style="width: 40px; height: 40px; background: var(--bkg-dark-primary); border-radius: var(--radius-panel); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">1</div>
+                                <div style="flex: 1;">
+                                    <div style="font-weight: 600; margin-bottom: var(--space-1);">Space-4 gaps</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.875rem;">Between flex items</div>
+                                </div>
+                                <div style="width: 40px; height: 40px; background: var(--bkg-dark-primary); border-radius: var(--radius-panel); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="buttons" class="section">
+            <h1>Button System</h1>
+            <p>Our button system provides six type variants with three states each (enabled, hover, disabled), three size variations (large, medium, small), and three icon configurations (no icon, icon right, icon left) — matching the Figma design specifications exactly.</p>
+
+            <div class="component-section">
+                <h2>Button Specifications</h2>
+                <div class="specs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-4); margin-bottom: var(--space-7);">
+                    <div class="spec-card" style="padding: var(--space-4); background: var(--bkg-base-secondary); border-radius: var(--radius-panel);">
+                        <h4 style="margin-bottom: var(--space-2);">Typography</h4>
+                        <ul style="list-style: none; padding: 0; font-size: var(--text-sm);">
+                            <li>Font Family: Funnel Display</li>
+                            <li>Font Weight: Bold (700)</li>
+                            <li>Large: 18px / 1.75 line-height</li>
+                            <li>Medium: 16px / 1.2 line-height</li>
+                            <li>Small: 14px / 1.2 line-height</li>
+                        </ul>
+                    </div>
+                    <div class="spec-card" style="padding: var(--space-4); background: var(--bkg-base-secondary); border-radius: var(--radius-panel);">
+                        <h4 style="margin-bottom: var(--space-2);">Sizes</h4>
+                        <ul style="list-style: none; padding: 0; font-size: var(--text-sm);">
+                            <li>Large: 48px height</li>
+                            <li>Medium: 40px height</li>
+                            <li>Small: 32px height</li>
+                            <li>Border Radius: 48px (fully rounded)</li>
+                        </ul>
+                    </div>
+                    <div class="spec-card" style="padding: var(--space-4); background: var(--bkg-base-secondary); border-radius: var(--radius-panel);">
+                        <h4 style="margin-bottom: var(--space-2);">Spacing</h4>
+                        <ul style="list-style: none; padding: 0; font-size: var(--text-sm);">
+                            <li>Large: 12px 32px (with icon: 16px on icon side)</li>
+                            <li>Medium: 8px 24px (with icon: 12px on icon side)</li>
+                            <li>Small: 4px 16px (with icon: 8px on icon side)</li>
+                            <li>Gap: 8px (lg/md), 4px (sm)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Button Type Variants</h2>
+                <p>Six button types showing enabled, hover, and disabled states.</p>
+
+                <div class="button-variant-group">
+                    <h3>Primary Turquoise</h3>
+                    <div class="button-state-row">
+                        <button class="btn btn-primary-turquoise">Button</button>
+                        <button class="btn btn-primary-turquoise btn-hover-demo">Button</button>
+                        <button class="btn btn-primary-turquoise" disabled>Button</button>
+                    </div>
+                    <div class="state-labels">
+                        <span>Enabled</span>
+                        <span>Hover</span>
+                        <span>Disabled</span>
+                    </div>
+                </div>
+
+                <div class="button-variant-group">
+                    <h3>Primary Sunshine</h3>
+                    <div class="button-state-row">
+                        <button class="btn btn-primary-sunshine">Button</button>
+                        <button class="btn btn-primary-sunshine btn-hover-demo">Button</button>
+                        <button class="btn btn-primary-sunshine" disabled>Button</button>
+                    </div>
+                    <div class="state-labels">
+                        <span>Enabled</span>
+                        <span>Hover</span>
+                        <span>Disabled</span>
+                    </div>
+                </div>
+
+                <div class="button-variant-group">
+                    <h3>Secondary on Light</h3>
+                    <div class="button-state-row">
+                        <button class="btn btn-secondary-light">Button</button>
+                        <button class="btn btn-secondary-light btn-hover-demo">Button</button>
+                        <button class="btn btn-secondary-light" disabled>Button</button>
+                    </div>
+                    <div class="state-labels">
+                        <span>Enabled</span>
+                        <span>Hover</span>
+                        <span>Disabled</span>
+                    </div>
+                </div>
+
+                <div class="button-variant-group button-dark-bg">
+                    <h3>Secondary on Dark</h3>
+                    <div class="button-state-row">
+                        <button class="btn btn-secondary-dark">Button</button>
+                        <button class="btn btn-secondary-dark btn-hover-demo">Button</button>
+                        <button class="btn btn-secondary-dark" disabled>Button</button>
+                    </div>
+                    <div class="state-labels">
+                        <span>Enabled</span>
+                        <span>Hover</span>
+                        <span>Disabled</span>
+                    </div>
+                </div>
+
+                <div class="button-variant-group">
+                    <h3>Tertiary</h3>
+                    <div class="button-state-row">
+                        <button class="btn btn-tertiary">Button</button>
+                        <button class="btn btn-tertiary btn-hover-demo">Button</button>
+                        <button class="btn btn-tertiary" disabled>Button</button>
+                    </div>
+                    <div class="state-labels">
+                        <span>Enabled</span>
+                        <span>Hover</span>
+                        <span>Disabled</span>
+                    </div>
+                </div>
+
+                <div class="button-variant-group button-overlay-bg">
+                    <h3>Overlay</h3>
+                    <div class="button-state-row">
+                        <button class="btn btn-overlay">Button</button>
+                        <button class="btn btn-overlay btn-hover-demo">Button</button>
+                        <button class="btn btn-overlay" disabled>Button</button>
+                    </div>
+                    <div class="state-labels">
+                        <span>Enabled</span>
+                        <span>Hover</span>
+                        <span>Disabled</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Button Size Variations</h2>
+                <p>Three size variations with exact specifications from Figma: Large (48px height, 18px text), Medium (40px height, 16px text), and Small (32px height, 14px text). All buttons use Funnel Display Bold.</p>
+
+                <div class="button-size-demo">
+                    <h3>Primary Turquoise Sizes</h3>
+                    <div class="button-group">
+                        <button class="btn btn-primary-turquoise btn-lg">Button</button>
+                        <button class="btn btn-primary-turquoise btn-md">Button</button>
+                        <button class="btn btn-primary-turquoise btn-sm">Button</button>
+                    </div>
+                    <div class="size-labels">
+                        <span>Large (48px / 18px text)</span>
+                        <span>Medium (40px / 16px text)</span>
+                        <span>Small (32px / 14px text)</span>
+                    </div>
+                </div>
+
+                <div class="button-size-demo">
+                    <h3>Primary Sunshine Sizes</h3>
+                    <div class="button-group">
+                        <button class="btn btn-primary-sunshine btn-lg">Button</button>
+                        <button class="btn btn-primary-sunshine btn-md">Button</button>
+                        <button class="btn btn-primary-sunshine btn-sm">Button</button>
+                    </div>
+                    <div class="size-labels">
+                        <span>Large (48px / 18px text)</span>
+                        <span>Medium (40px / 16px text)</span>
+                        <span>Small (32px / 14px text)</span>
+                    </div>
+                </div>
+
+                <div class="button-size-demo button-dark-bg">
+                    <h3>Secondary on Dark Sizes</h3>
+                    <div class="button-group">
+                        <button class="btn btn-secondary-dark btn-lg">Button</button>
+                        <button class="btn btn-secondary-dark btn-md">Button</button>
+                        <button class="btn btn-secondary-dark btn-sm">Button</button>
+                    </div>
+                    <div class="size-labels">
+                        <span>Large (48px / 18px text)</span>
+                        <span>Medium (40px / 16px text)</span>
+                        <span>Small (32px / 14px text)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Button Icon Configurations</h2>
+                <p>Buttons support three icon configurations: no icon, icon right (arrow forward), and icon left (arrow back). Icons should be 16px for small buttons, 20px for medium, and 24px for large buttons.</p>
+                <p style="margin-top: var(--space-2); padding: var(--space-3); background: var(--bkg-base-secondary); border-radius: var(--radius-panel); font-size: var(--text-sm);">
+                    <strong>Important:</strong> Add <code>btn-icon-right</code> or <code>btn-icon-left</code> class to buttons with icons. This reduces padding on the icon's side to half, creating better visual balance.
+                </p>
+
+                <div class="button-icon-demo" style="display: flex; gap: var(--space-4); align-items: center; flex-wrap: wrap; margin-top: var(--space-4);">
+                    <button class="btn btn-primary-turquoise">No Icon</button>
+                    <button class="btn btn-primary-turquoise btn-icon-right">
+                        Icon Right
+                        <img src="icons/material-symbols_chevron-right.svg" alt="" class="icon-svg" style="width: 20px; height: 20px;">
+                    </button>
+                    <button class="btn btn-primary-turquoise btn-icon-left">
+                        <img src="icons/material-symbols_chevron-left.svg" alt="" class="icon-svg" style="width: 20px; height: 20px;">
+                        Icon Left
+                    </button>
+                </div>
+
+                <h3 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Size Examples</h3>
+                <div class="button-icon-demo" style="display: flex; gap: var(--space-4); align-items: center; flex-wrap: wrap;">
+                    <button class="btn btn-primary-turquoise btn-lg btn-icon-right">
+                        Large
+                        <img src="icons/material-symbols_chevron-right.svg" alt="" class="icon-svg" style="width: 24px; height: 24px;">
+                    </button>
+                    <button class="btn btn-primary-turquoise btn-md btn-icon-right">
+                        Medium
+                        <img src="icons/material-symbols_chevron-right.svg" alt="" class="icon-svg" style="width: 20px; height: 20px;">
+                    </button>
+                    <button class="btn btn-primary-turquoise btn-sm btn-icon-right">
+                        Small
+                        <img src="icons/material-symbols_chevron-right.svg" alt="" class="icon-svg" style="width: 16px; height: 16px;">
+                    </button>
+                </div>
+
+                <h3 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Dark Button Icons</h3>
+                <p style="margin-bottom: var(--space-3);">Use <code>icon-inverse</code> class for icons on dark background buttons.</p>
+                <div class="button-icon-demo button-dark-bg" style="display: flex; gap: var(--space-4); align-items: center; flex-wrap: wrap; padding: var(--space-4); background: var(--bkg-dark-primary); border-radius: var(--radius-panel);">
+                    <button class="btn btn-secondary-dark btn-icon-right">
+                        Secondary Dark
+                        <img src="icons/material-symbols_chevron-right.svg" alt="" class="icon-svg" style="width: 20px; height: 20px;">
+                    </button>
+                    <button class="btn btn-overlay btn-icon-right">
+                        Overlay
+                        <img src="icons/material-symbols_chevron-right.svg" alt="" class="icon-svg icon-inverse" style="width: 20px; height: 20px;">
+                    </button>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Usage Guidelines</h2>
+                <div class="usage-guidelines">
+                    <div class="guideline-item">
+                        <h4>Primary Turquoise</h4>
+                        <p>Use for primary actions and main call-to-actions. High contrast and attention-grabbing. Perfect for key conversion actions.</p>
+                    </div>
+                    <div class="guideline-item">
+                        <h4>Primary Sunshine</h4>
+                        <p>Use for accent actions and warm call-to-actions. Great for book/purchase actions and secondary CTAs.</p>
+                    </div>
+                    <div class="guideline-item">
+                        <h4>Secondary on Light</h4>
+                        <p>Use on light backgrounds for secondary actions and navigation. Provides clear contrast on white/light surfaces.</p>
+                    </div>
+                    <div class="guideline-item">
+                        <h4>Secondary on Dark</h4>
+                        <p>Use on dark backgrounds like headers and overlays. Maintains visibility and hierarchy on dark surfaces.</p>
+                    </div>
+                    <div class="guideline-item">
+                        <h4>Tertiary</h4>
+                        <p>Use for subtle, low-emphasis actions. Perfect for cancel, dismiss, or optional actions that shouldn't dominate the interface.</p>
+                    </div>
+                    <div class="guideline-item">
+                        <h4>Overlay</h4>
+                        <p>Use over images and complex backgrounds where transparency is needed. Ensures button visibility on varied backgrounds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="forms" class="section">
+            <h1>Form Components</h1>
+            <p>Form components for collecting user input with consistent styling and behaviour.</p>
+
+            <div class="component-section">
+                <h2>Input Fields</h2>
+                <div class="form-group">
+                    <label for="input-default">Default Input</label>
+                    <input type="text" id="input-default" class="form-input" placeholder="Enter text...">
+                </div>
+                <div class="form-group">
+                    <label for="input-error">Input with Error</label>
+                    <input type="text" id="input-error" class="form-input error" placeholder="Enter text...">
+                    <span class="error-message">This field is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="input-success">Input with Success</label>
+                    <input type="text" id="input-success" class="form-input success" placeholder="Enter text...">
+                    <span class="success-message">Looks good!</span>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Textarea</h2>
+                <div class="form-group">
+                    <label for="textarea-default">Message</label>
+                    <textarea id="textarea-default" class="form-textarea" rows="4" placeholder="Enter your message..."></textarea>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Select Dropdown</h2>
+                <div class="form-group">
+                    <label for="select-default">Choose an option</label>
+                    <select id="select-default" class="form-select">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section id="cards" class="section">
+            <h1>Cards</h1>
+            <p>Cards contain content and actions about a single subject.</p>
+
+            <div class="component-section">
+                <h2>Explore Cards</h2>
+                <p>Explore cards are designed for showcasing experiences and destinations. They feature responsive breakpoints and hover states for interactive engagement. Hover over the card to see the expansion effect.</p>
+
+                <div class="component-example">
+                    <div class="card-explore card-explore--xl card-explore--interactive">
+                    <div class="card-explore__background"></div>
+                    <div class="card-explore__content">
+                        <div class="card-explore__eyebrow">Experiences</div>
+                        <h3 class="card-explore__title">Vivid Sydney Climb & Bridge Museum</h3>
+                    </div>
+                    <div class="card-explore__image">
+                        <img src="assets/images/bridge-climb-experience.png" alt="Vivid Sydney Climb & Bridge Museum" />
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="calendar" class="section">
+            <h1>Calendar Component</h1>
+            <p>A calendar component for date selection with month navigation, hover states, and single selection functionality. Perfect for booking systems and date pickers.</p>
+
+            <div class="component-section">
+                <h2>Interactive Calendar</h2>
+                <p>Navigate between months using the arrow buttons. Hover over dates to see the hover effect. Click on a date to select it (only one date can be selected at a time).</p>
+
+                <div class="component-example">
+                    <div class="calendar-demo">
+                    <div class="calendar-container">
+                        <div class="calendar-month">
+                            <div class="calendar-header">
+                                <button class="calendar-nav-btn" id="prev-month" data-direction="prev">
+                                    <img src="icons/material-symbols_chevron-left.svg" alt="Previous month" class="icon-svg icon-sm">
+                                </button>
+                                <h3 class="calendar-month-title" id="calendar-title">June 2025</h3>
+                                <button class="calendar-nav-btn" id="next-month" data-direction="next">
+                                    <img src="icons/material-symbols_chevron-right.svg" alt="Next month" class="icon-svg icon-sm">
+                                </button>
+                            </div>
+
+                            <div class="calendar-grid">
+                                <div class="calendar-labels">
+                                    <div class="calendar-label">Mon</div>
+                                    <div class="calendar-label">Tue</div>
+                                    <div class="calendar-label">Wed</div>
+                                    <div class="calendar-label">Thu</div>
+                                    <div class="calendar-label">Fri</div>
+                                    <div class="calendar-label">Sat</div>
+                                    <div class="calendar-label">Sun</div>
+                                </div>
+
+                                <div class="calendar-days" id="calendar-days">
+                                    <!-- Days will be populated by JavaScript -->
+                                </div>
+                            </div>
+
+                            <div class="calendar-footer">
+                                <p>* Prices displayed are the lowest for the day based on adult ticket prices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Usage Guidelines</h2>
+                <div class="usage-guidelines">
+                    <div class="guideline-item">
+                        <h4>Single Selection</h4>
+                        <p>Only one date can be selected at a time. Selecting a new date will deselect the previously selected date.</p>
+                    </div>
+                    <div class="guideline-item">
+                        <h4>Month Navigation</h4>
+                        <p>Use the left and right arrow buttons to navigate between months. The calendar supports both past and future dates.</p>
+                    </div>
+                    <div class="guideline-item">
+                        <h4>Pricing Display</h4>
+                        <p>Available dates can show pricing information below the date number. Different pricing tiers are indicated by color.</p>
+                    </div>
+                    <div class="guideline-item">
+                        <h4>States</h4>
+                        <p>Calendar days have multiple states: default, hover, selected, disabled (for past dates), and blank (for days outside the current month).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="accordion" class="section">
+            <h1>Accordion</h1>
+            <p>Accordion components allow users to toggle content sections open and closed. These are perfect for FAQs, navigation menus, or any content that needs to be organized in an expandable format.</p>
+
+            <div class="component-section">
+                <h2>Basic Accordion</h2>
+                <p>Simple accordion items that can be expanded and collapsed individually.</p>
+
+                <div class="component-example">
+                    <div class="accordion-container">
+                    <div class="accordion-item" data-accordion-item>
+                        <button class="accordion-header" data-accordion-trigger>
+                            <span class="accordion-title">Accordion Item 1</span>
+                            <img src="icons/material-symbols_add.svg" alt="Expand accordion" class="accordion-icon icon-svg icon-md">
+                        </button>
+                        <div class="accordion-content" data-accordion-content>
+                            <div class="accordion-body">
+                                This is the content for the first accordion item. It can contain paragraphs, lists, images, or any other content you need to display.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-accordion-item>
+                        <button class="accordion-header" data-accordion-trigger>
+                            <span class="accordion-title">Accordion Item 2</span>
+                            <img src="icons/material-symbols_add.svg" alt="Expand accordion" class="accordion-icon icon-svg icon-md">
+                        </button>
+                        <div class="accordion-content" data-accordion-content>
+                            <div class="accordion-body">
+                                This is the content for the second accordion item. Each accordion can be opened and closed independently of the others.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-accordion-item>
+                        <button class="accordion-header" data-accordion-trigger>
+                            <span class="accordion-title">Accordion Item 3</span>
+                            <img src="icons/material-symbols_add.svg" alt="Expand accordion" class="accordion-icon icon-svg icon-md">
+                        </button>
+                        <div class="accordion-content" data-accordion-content>
+                            <div class="accordion-body">
+                                This is the content for the third accordion item. You can include any content here that makes sense for your use case.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Accordion with Rich Content</h2>
+                <p>Accordion items can contain various types of content including lists, buttons, and formatted text.</p>
+
+                <div class="component-example">
+                    <div class="accordion-container">
+                    <div class="accordion-item" data-accordion-item>
+                        <button class="accordion-header" data-accordion-trigger>
+                            <span class="accordion-title">Museum Hours & Admission</span>
+                            <img src="icons/material-symbols_add.svg" alt="Expand accordion" class="accordion-icon icon-svg icon-md">
+                        </button>
+                        <div class="accordion-content" data-accordion-content>
+                            <div class="accordion-body">
+                                <h4>Opening Hours</h4>
+                                <ul>
+                                    <li>Monday - Friday: 9:00 AM - 5:00 PM</li>
+                                    <li>Saturday - Sunday: 10:00 AM - 6:00 PM</li>
+                                    <li>Closed on public holidays</li>
+                                </ul>
+                                <h4>Admission Prices</h4>
+                                <p>Adults: $25.00 | Children (4-13): $15.00 | Concession: $23.95</p>
+                                <button class="btn btn-primary-turquoise btn-sm">Book Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-accordion-item>
+                        <button class="accordion-header" data-accordion-trigger>
+                            <span class="accordion-title">Getting Here</span>
+                            <img src="icons/material-symbols_add.svg" alt="Expand accordion" class="accordion-icon icon-svg icon-md">
+                        </button>
+                        <div class="accordion-content" data-accordion-content>
+                            <div class="accordion-body">
+                                <p>The museum is conveniently located in the heart of the city with multiple transportation options:</p>
+                                <h4>Public Transport</h4>
+                                <ul>
+                                    <li>Bus: Routes 123, 456, and 789 stop directly outside</li>
+                                    <li>Train: Central Station is a 5-minute walk</li>
+                                    <li>Light Rail: Museum Stop (Line 1)</li>
+                                </ul>
+                                <h4>Parking</h4>
+                                <p>Limited street parking available. Paid parking garage located 2 blocks away.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Usage Guidelines</h2>
+                <div class="usage-guidelines">
+                    <div class="guideline-item">
+                        <h4>When to Use</h4>
+                        <p>Use accordions for organizing related content that doesn't need to be viewed all at once. Great for FAQs, feature lists, or detailed information that users might want to scan.</p>
+                    </div>
+                    <div class="guideline-item">
+                        <h4>Accessibility</h4>
+                        <p>Accordion headers are buttons and can be navigated using keyboard. Use proper ARIA attributes and ensure content is accessible to screen readers.</p>
+                    </div>
+                    <div class="guideline-item">
+                        <h4>Content Length</h4>
+                        <p>Keep accordion titles concise but descriptive. Content inside can be longer but should still be scannable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="icons" class="section">
+            <h1>Icon System</h1>
+            <p>A comprehensive collection of Material Design icons for user interface elements. All icons are SVG-based and support theme colors through CSS variables.</p>
+
+            <div class="component-section">
+                <h2>Available Icons</h2>
+                <div class="icon-grid" id="icon-grid">
+                    <!-- Icons will be loaded dynamically -->
+                </div>
+            </div>
+
+            <div class="component-section">
+                <h2>Icon Guidelines</h2>
+                <p>Icons should be used consistently throughout the interface. Use semantic icon names when possible and maintain consistent sizing across similar interface elements.</p>
+
+                <div style="margin-top: var(--space-6);">
+                    <h3>Sizing</h3>
+                    <p>Standard icon sizes are 16px, 20px, 24px, and 32px. Use appropriate sizes based on context and visual hierarchy requirements.</p>
+                </div>
+
+                <div style="margin-top: var(--space-6);">
+                    <h3>Implementation</h3>
+                    <p>Reference icons using relative paths: <code>icons/material-symbols_[name].svg</code>. SVG files can be embedded inline or referenced as images.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
