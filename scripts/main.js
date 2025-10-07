@@ -406,41 +406,274 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Search functionality (basic implementation)
+// Advanced Search Functionality
 function initializeSearch() {
-    const searchInput = document.createElement('input');
-    searchInput.type = 'text';
-    searchInput.placeholder = 'Search components...';
-    searchInput.className = 'search-input';
-    searchInput.style.cssText = `
-        width: calc(100% - 4rem);
-        padding: 0.75rem;
-        margin: 0 2rem 1rem;
-        border: 1px solid #d1d5db;
-        border-radius: 6px;
-        font-size: 0.875rem;
-        box-sizing: border-box;
-    `;
+    const searchInput = document.getElementById('search-input');
+    if (!searchInput) {
+        console.log('Search input not found');
+        return;
+    }
 
-    const sidebar = document.querySelector('.sidebar');
-    const logo = document.querySelector('.logo');
-    sidebar.insertBefore(searchInput, logo.nextSibling);
+    console.log('Initializing search...');
 
+    // Build search index of all sections, components, and tokens
+    const searchIndex = buildSearchIndex();
+    console.log(`Search index built with ${searchIndex.length} items`);
+
+    let searchTimeout;
     searchInput.addEventListener('input', function(e) {
-        const searchTerm = e.target.value.toLowerCase();
-        const navLinks = document.querySelectorAll('.nav-link');
+        const searchTerm = e.target.value.toLowerCase().trim();
 
-        navLinks.forEach(link => {
-            const text = link.textContent.toLowerCase();
-            const listItem = link.parentElement;
+        // Clear previous timeout
+        clearTimeout(searchTimeout);
 
-            if (text.includes(searchTerm)) {
-                listItem.style.display = 'block';
-            } else {
-                listItem.style.display = 'none';
+        // Debounce search for better performance
+        searchTimeout = setTimeout(() => {
+            if (searchTerm === '') {
+                // Reset - show all navigation items
+                resetNavigation();
+                return;
             }
+
+            console.log(`Searching for: "${searchTerm}"`);
+            // Search and filter
+            performSearch(searchTerm, searchIndex);
+        }, 150);
+    });
+
+    // Clear search on Escape
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            this.value = '';
+            resetNavigation();
+        }
+    });
+}
+
+function buildSearchIndex() {
+    const index = [];
+
+    // Index navigation links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        const href = link.getAttribute('href');
+        const text = link.textContent.trim();
+
+        index.push({
+            type: 'navigation',
+            element: link.parentElement,
+            href: href,
+            text: text,
+            keywords: text.toLowerCase()
         });
     });
+
+    // Index all section headings
+    document.querySelectorAll('.section h1, .section h2, .section h3').forEach(heading => {
+        const section = heading.closest('.section');
+        const sectionId = section ? section.id : '';
+
+        index.push({
+            type: 'heading',
+            element: heading,
+            sectionId: sectionId,
+            text: heading.textContent.trim(),
+            keywords: heading.textContent.toLowerCase()
+        });
+    });
+
+    // Index tokens
+    document.querySelectorAll('[data-token]').forEach(token => {
+        const tokenName = token.getAttribute('data-token');
+        const tokenValue = token.getAttribute('data-value');
+
+        index.push({
+            type: 'token',
+            element: token,
+            sectionId: 'tokens',
+            text: tokenName,
+            keywords: `${tokenName} ${tokenValue}`.toLowerCase()
+        });
+    });
+
+    // Index button types
+    document.querySelectorAll('.button-variant-group h3').forEach(buttonType => {
+        index.push({
+            type: 'component',
+            element: buttonType,
+            sectionId: 'buttons',
+            text: buttonType.textContent.trim(),
+            keywords: buttonType.textContent.toLowerCase() + ' button'
+        });
+    });
+
+    // Index all component sections (h2 and h3 within sections)
+    document.querySelectorAll('.component-section h2, .component-section h3').forEach(componentHeading => {
+        const section = componentHeading.closest('.section');
+        const sectionId = section ? section.id : '';
+
+        index.push({
+            type: 'component',
+            element: componentHeading,
+            sectionId: sectionId,
+            text: componentHeading.textContent.trim(),
+            keywords: componentHeading.textContent.toLowerCase()
+        });
+    });
+
+    // Index color sections
+    document.querySelectorAll('.color-section h2').forEach(colorSection => {
+        index.push({
+            type: 'component',
+            element: colorSection,
+            sectionId: 'colors',
+            text: colorSection.textContent.trim(),
+            keywords: colorSection.textContent.toLowerCase()
+        });
+    });
+
+    // Index typography sections
+    document.querySelectorAll('.typography-section h2, .typography-section h3').forEach(typoSection => {
+        index.push({
+            type: 'component',
+            element: typoSection,
+            sectionId: 'typography',
+            text: typoSection.textContent.trim(),
+            keywords: typoSection.textContent.toLowerCase()
+        });
+    });
+
+    // Index card types and other specific components
+    document.querySelectorAll('.card-explore, .accordion-item, .calendar-container').forEach(component => {
+        const section = component.closest('.section');
+        const sectionId = section ? section.id : '';
+
+        // Get component name from heading or class
+        let componentName = '';
+        let keywords = '';
+
+        if (component.classList.contains('card-explore')) {
+            componentName = 'Explore Cards';
+            keywords = 'explore cards card';
+        } else if (component.classList.contains('accordion-item')) {
+            componentName = 'Accordion';
+            keywords = 'accordion collapse expand';
+        } else if (component.classList.contains('calendar-container')) {
+            componentName = 'Calendar';
+            keywords = 'calendar date picker booking';
+        }
+
+        if (componentName) {
+            index.push({
+                type: 'component',
+                element: component,
+                sectionId: sectionId,
+                text: componentName,
+                keywords: keywords
+            });
+        }
+    });
+
+    return index;
+}
+
+function performSearch(searchTerm, index) {
+    const results = index.filter(item =>
+        item.keywords.includes(searchTerm)
+    );
+
+    console.log(`Found ${results.length} results:`, results.map(r => r.text));
+
+    // Hide all navigation items first
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.parentElement.style.display = 'none';
+    });
+
+    // Show matching navigation items and expand their sections
+    const matchedSections = new Set();
+    results.forEach(result => {
+        if (result.type === 'navigation') {
+            result.element.style.display = 'block';
+            // Expand parent section
+            const navContent = result.element.closest('.nav-section-content');
+            if (navContent) {
+                navContent.classList.remove('collapsed');
+                const sectionName = navContent.getAttribute('data-section-content');
+                const header = document.querySelector(`[data-section="${sectionName}"]`);
+                if (header) {
+                    header.classList.remove('collapsed');
+                    matchedSections.add(sectionName);
+                }
+            }
+        } else {
+            // For other types, highlight the corresponding nav item
+            const navLink = document.querySelector(`.nav-link[href="#${result.sectionId}"]`);
+            if (navLink && navLink.parentElement) {
+                navLink.parentElement.style.display = 'block';
+                // Expand parent section
+                const navContent = navLink.closest('.nav-section-content');
+                if (navContent) {
+                    navContent.classList.remove('collapsed');
+                    const sectionName = navContent.getAttribute('data-section-content');
+                    const header = document.querySelector(`[data-section="${sectionName}"]`);
+                    if (header) {
+                        header.classList.remove('collapsed');
+                        matchedSections.add(sectionName);
+                    }
+                }
+            }
+        }
+    });
+
+    // Show count of results
+    if (results.length === 0) {
+        showSearchFeedback('No results found');
+    } else {
+        showSearchFeedback(`${results.length} result${results.length === 1 ? '' : 's'} found`);
+    }
+}
+
+function resetNavigation() {
+    // Show all navigation items
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.parentElement.style.display = 'block';
+    });
+
+    // Re-expand all sections to their default state
+    document.querySelectorAll('.nav-section-content').forEach(content => {
+        content.classList.remove('collapsed');
+    });
+
+    document.querySelectorAll('.collapsible-header').forEach(header => {
+        header.classList.remove('collapsed');
+        const icon = header.querySelector('.collapse-icon');
+        if (icon) {
+            icon.src = 'icons/material-symbols_keyboard-arrow-up.svg';
+            icon.alt = 'Collapse';
+        }
+    });
+
+    // Remove search feedback
+    const feedback = document.querySelector('.search-feedback');
+    if (feedback) {
+        feedback.remove();
+    }
+}
+
+function showSearchFeedback(message) {
+    // Remove existing feedback
+    const existingFeedback = document.querySelector('.search-feedback');
+    if (existingFeedback) {
+        existingFeedback.remove();
+    }
+
+    const feedback = document.createElement('div');
+    feedback.className = 'search-feedback';
+    feedback.textContent = message;
+
+    const searchContainer = document.querySelector('.search-container');
+    if (searchContainer) {
+        searchContainer.appendChild(feedback);
+    }
 }
 
 // Initialize search after DOM is loaded
