@@ -410,6 +410,7 @@ document.addEventListener('keydown', function(e) {
 function initializeSearch() {
     const searchInput = document.getElementById('search-input');
     const searchClear = document.getElementById('search-clear');
+    const searchIcon = document.querySelector('.search-icon');
 
     if (!searchInput) {
         console.log('Search input not found');
@@ -426,9 +427,15 @@ function initializeSearch() {
     searchInput.addEventListener('input', function(e) {
         const searchTerm = e.target.value.toLowerCase().trim();
 
-        // Show/hide clear button
-        if (searchClear) {
-            searchClear.style.display = e.target.value ? 'flex' : 'none';
+        // Show/hide clear button and search icon
+        if (searchClear && searchIcon) {
+            if (e.target.value) {
+                searchClear.style.display = 'flex';
+                searchIcon.style.display = 'none';
+            } else {
+                searchClear.style.display = 'none';
+                searchIcon.style.display = 'block';
+            }
         }
 
         // Clear previous timeout
@@ -452,8 +459,9 @@ function initializeSearch() {
     searchInput.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             this.value = '';
-            if (searchClear) {
+            if (searchClear && searchIcon) {
                 searchClear.style.display = 'none';
+                searchIcon.style.display = 'block';
             }
             resetNavigation();
         }
@@ -464,6 +472,9 @@ function initializeSearch() {
         searchClear.addEventListener('click', function() {
             searchInput.value = '';
             this.style.display = 'none';
+            if (searchIcon) {
+                searchIcon.style.display = 'block';
+            }
             searchInput.focus();
             resetNavigation();
         });
@@ -608,6 +619,11 @@ function performSearch(searchTerm, index) {
         link.parentElement.style.display = 'none';
     });
 
+    // Hide all section headers initially
+    document.querySelectorAll('.nav-section-header').forEach(header => {
+        header.style.display = 'none';
+    });
+
     // Show matching navigation items and expand their sections
     const matchedSections = new Set();
     results.forEach(result => {
@@ -621,6 +637,7 @@ function performSearch(searchTerm, index) {
                 const header = document.querySelector(`[data-section="${sectionName}"]`);
                 if (header) {
                     header.classList.remove('collapsed');
+                    header.style.display = 'flex'; // Show the header
                     matchedSections.add(sectionName);
                 }
             }
@@ -637,6 +654,7 @@ function performSearch(searchTerm, index) {
                     const header = document.querySelector(`[data-section="${sectionName}"]`);
                     if (header) {
                         header.classList.remove('collapsed');
+                        header.style.display = 'flex'; // Show the header
                         matchedSections.add(sectionName);
                     }
                 }
@@ -656,6 +674,11 @@ function resetNavigation() {
     // Show all navigation items
     document.querySelectorAll('.nav-link').forEach(link => {
         link.parentElement.style.display = 'block';
+    });
+
+    // Show all section headers
+    document.querySelectorAll('.nav-section-header').forEach(header => {
+        header.style.display = 'flex';
     });
 
     // Re-expand all sections to their default state
