@@ -536,6 +536,9 @@ body {
     cursor: pointer;
     transition: transform 0.2s ease;
     border: 1px solid var(--black-15) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .token-swatch {
@@ -544,6 +547,62 @@ body {
 
 .color-swatch:hover {
     transform: scale(1.05);
+}
+
+/* AA text on non-system swatches - exclude only system white/black opacity scales */
+.color-swatch:not(.white-100):not(.white-90):not(.white-80):not(.white-70):not(.white-60):not(.white-50):not(.white-40):not(.white-30):not(.white-20):not(.white-15):not(.white-10):not(.white-5):not(.black-100):not(.black-90):not(.black-80):not(.black-70):not(.black-60):not(.black-50):not(.black-40):not(.black-30):not(.black-20):not(.black-15):not(.black-10):not(.black-5)::before {
+    content: "AA";
+    font-family: var(--typography-header-family);
+    font-weight: var(--typography-header-weight);
+    font-size: var(--text-xl);
+    line-height: 1;
+    z-index: 1;
+}
+
+/* PROPERLY TESTED - Off-white text (#F2F2F2) passes AA (4.5:1+) on these backgrounds */
+.deep-blue-00::before,
+.deep-blue-01::before,
+.deep-blue-02::before,
+.deep-blue-03::before,
+.deep-blue-04::before,
+.deep-blue-05::before,
+.bridge-grey-00::before,
+.bridge-grey-01::before,
+.bridge-grey-02::before,
+.bridge-grey-03::before,
+.bridge-grey-04::before,
+.harbour-blue-00::before,
+.harbour-blue-01::before,
+.harbour-blue-02::before,
+.harbour-blue-03::before,
+.harbour-blue-04::before,
+.harbour-blue-05::before,
+.asphalt-00::before {
+    color: var(--off-white-00); /* #F2F2F2 */
+}
+
+/* PROPERLY TESTED - Asphalt text (#1A1A1A) passes AA (4.5:1+) on these backgrounds */
+.turquoise-00::before,    /* #00B4AB */
+.turquoise-01::before,    /* #00A69D - CORRECTED: fails with light text */
+.turquoise-02::before,
+.turquoise-03::before,
+.turquoise-04::before,
+.turquoise-05::before,
+.sunshine-00::before,
+.sunshine-01::before,
+.sunshine-02::before,
+.sunshine-03::before,
+.sunshine-04::before,
+.sunshine-05::before,
+.bridge-grey-05::before,
+.granite-00::before,
+.granite-01::before,
+.granite-02::before,
+.granite-03::before,
+.granite-04::before,
+.granite-05::before,
+.off-white-00::before {
+    color: var(--asphalt-00); /* #1A1A1A */
 }
 
 .color-swatch::after {
